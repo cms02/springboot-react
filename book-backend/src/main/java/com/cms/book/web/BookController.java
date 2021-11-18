@@ -2,6 +2,7 @@ package com.cms.book.web;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,11 +22,13 @@ public class BookController {
 
 	private final BookService bookService;
 
+	@CrossOrigin
 	@PostMapping("/book")
 	public ResponseEntity<?> save(@RequestBody Book book) {
 		return new ResponseEntity<>(bookService.저장하기(book), HttpStatus.CREATED); // 201
 	}
 
+	@CrossOrigin
 	@GetMapping("/book")
 	public ResponseEntity<?> findAll() {
 		return new ResponseEntity<>(bookService.모두가져오기(), HttpStatus.OK); // 200

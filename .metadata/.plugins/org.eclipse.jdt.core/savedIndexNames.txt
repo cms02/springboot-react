@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\r2ware\mylab\book\.metadata\.plugins\org.eclipse.jdt.core
+354515309.index
+3132561548.index

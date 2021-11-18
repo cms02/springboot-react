@@ -32,6 +32,7 @@ const SaveForm = (props) => {
         }
       })
       .then((res) => {
+        //Catch는 then 에서 오류가 나야 실행됨!
         if (res != null) {
           props.history.push('/');
         } else {

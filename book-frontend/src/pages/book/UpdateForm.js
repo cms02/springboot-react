@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
@@ -10,8 +11,8 @@ const UpdateForm = (props) => {
   });
 
   useEffect(() => {
-    fetch('http://localhost:8787/book/' + id)
-      .then((res) => res.json())
+    axios('/book/' + id)
+      .then((res) => res.data)
       .then((res) => {
         setBook(res);
       });

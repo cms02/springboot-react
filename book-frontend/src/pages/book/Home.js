@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BookItem from '../../components/BookItem';
+import axios from 'axios';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -7,8 +8,9 @@ const Home = () => {
   //함수 실행시 최초 한번 실행되는 것
 
   useEffect(() => {
-    fetch('http://localhost:8787/book')
-      .then((res) => res.json())
+    axios
+      .get('/book')
+      .then((res) => res.data)
       .then((res) => {
         console.log(1, res);
         setBooks(res);

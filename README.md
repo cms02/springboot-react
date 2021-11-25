@@ -14,6 +14,7 @@
 <!-- - yarn add redux react-redux -->
 - yarn add react-router-dom@5
 - yarn add react-bootstrap bootstrap
+- yarn add http-proxy-middleware
 
 ```txt
 import 'bootstrap/dist/css/bootstrap.min.css';
